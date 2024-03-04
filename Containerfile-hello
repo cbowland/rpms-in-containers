@@ -1,0 +1,11 @@
+FROM registry.access.redhat.com/ubi9:9.2
+
+# ADD rpm-work/hello-world-1.0.0-1.x86_64.rpm  /hello-world-1.0.0-1.x86_64.rpm 
+# RUN dnf install -y /hello-world-1.0.0-1.x86_64.rpm 
+# RUN dnf install -y wget
+# RUN wget http://192.168.1.201/repo/fedora/releases/38/x86_64/hello-world-1.0.0-1.x86_64.rpm
+# RUN dnf install -y hello-world-1.0.0-1.x86_64.rpm
+
+RUN dnf install -y http://192.168.1.201/repo/fedora/releases/38/x86_64/hello-world-1.0.0-1.x86_64.rpm
+
+ENTRYPOINT /usr/bin/hello

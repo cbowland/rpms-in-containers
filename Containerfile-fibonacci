@@ -1,0 +1,7 @@
+FROM registry.access.redhat.com/ubi9:9.2
+
+ADD rpm-work/fibonacci-1.0.0-1.x86_64.rpm  /fibonacci-1.0.0-1.x86_64.rpm
+
+RUN dnf install -y /fibonacci-1.0.0-1.x86_64.rpm
+
+ENTRYPOINT /usr/bin/fibonacci
