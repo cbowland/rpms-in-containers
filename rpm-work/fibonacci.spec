@@ -10,7 +10,7 @@ Requires: bash
 buildroot: ~/workspace/rpms-in-containers/rpm-work # this should be replaced with your working directory where the spec is saved
 
 %description
-An simple package containing a hello-world binary
+An simple package that prints the first N of the fibonacci sequence
 
 %install
 mkdir -p %{buildroot}/usr/bin/
